@@ -43,6 +43,7 @@ void CALLBACK recv_callback(DWORD err_res,
 	DWORD rec_flag)
 {
 	if (0 == transfer_size) return;
+
 	std::cout << "Message from CLIENT : ";
 	for (DWORD i = 0; i < transfer_size; ++i) {
 		std::cout << buf[i];
