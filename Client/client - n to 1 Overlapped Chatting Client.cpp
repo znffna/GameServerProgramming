@@ -76,7 +76,7 @@ int main()
 	addr_s.sin_family = AF_INET;
 	addr_s.sin_port = htons(SERVER_PORT);
 	inet_pton(AF_INET, SERVER_ADDR, &addr_s.sin_addr);
-	connect(g_server_s, reinterpret_cast<sockaddr*>(&addr_s), sizeof(addr_s));
+	connect(g_server_s, reinterpret_cast<sockaddr *>(&addr_s), sizeof(addr_s));
 	send_message_to_server();
 	while (false == b_logout)
 		SleepEx(0, true);
